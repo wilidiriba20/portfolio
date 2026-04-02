@@ -83,41 +83,63 @@ nav {
 .nav-links a:hover {
   color: var(--primary);
 }
+/* Hamburger container */
 .hamburger {
   display: none;
-  font-size: 1.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
   cursor: pointer;
-  color: var(--text-main);
+  z-index: 1100;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: var(--text-main);
+  border-radius: 3px;
+  transition: all 0.4s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* Show hamburger only on mobile */
 @media (max-width: 768px) {
   .hamburger {
-    display: block;
+    display: flex;
   }
 
   .nav-links {
-    display: none; /* hidden initially */
+    display: none;
     position: absolute;
     top: 70px;
     right: 8%;
     background: var(--bg-secondary);
     flex-direction: column;
-    width: 200px;
+    width: 220px;
     border-radius: 12px;
     box-shadow: var(--shadow-md);
     padding: 1rem;
   }
 
-  .nav-links a {
-    margin: 0.8rem 0;
-  }
-
   .nav-links.show {
     display: flex;
   }
-}
 
+  .nav-links a {
+    margin: 0.8rem 0;
+  }
+}
 header {
   height: 100vh;
   display: flex;
@@ -299,6 +321,34 @@ h2::after {
   background: #fff;
   border-color: var(--primary);
   transform: scale(1.05);
+}
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.social-links a {
+  font-size: 1.6rem;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  decoration: none;
+}
+
+/* Hover effect */
+.social-links a:hover {
+  transform: translateY(-5px) scale(1.1);
+  background: #fff;
+  color: var(--primary);
+  box-shadow: 0 10px 20px rgba(28, 56, 161, 0.3);
 }
 
 footer {
