@@ -170,6 +170,15 @@ section.reveal {
   opacity: 1;
   transform: translateY(0);
 }
+section {
+  padding: 80px 8%;
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+  scroll-margin-top: 80px;
+}
 h2 {
   font-size: 2.2rem;
   font-weight: 800;
