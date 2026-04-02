@@ -1,12 +1,9 @@
 :root {
-  /* --- Pure Light Theme Palette --- */
   --bg-main: #f8fafc;
   --bg-secondary: #ffffff;
   --card-bg: rgba(255, 255, 255, 0.8);
   --nav-bg: rgba(255, 255, 255, 0.8);
-  /* Primary Blue from your identity */
   --primary: #1c38a1;
-  /* Accent Gold from your identity */
   --accent: #f1a92e;
   --text-main: #0f172a;
   --text-muted: #64748b;
@@ -29,7 +26,7 @@ body {
   color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
-  /* Subtle mesh gradient for a modern professional look */
+
   background-image:
     radial-gradient(at 0% 0%, rgba(28, 56, 161, 0.03) 0px, transparent 50%),
     radial-gradient(at 100% 0%, rgba(241, 169, 46, 0.03) 0px, transparent 50%);
@@ -51,7 +48,6 @@ nav {
   box-shadow: var(--shadow-sm);
 }
 
-/* Minimalist Self-Replacement Logo */
 .brand {
   font-size: 1.3rem;
   font-weight: 800;
@@ -88,7 +84,6 @@ nav {
   color: var(--primary);
 }
 
-/* --- Hero Section --- */
 header {
   height: 100vh;
   display: flex;
@@ -125,7 +120,6 @@ header p {
   margin-bottom: 2.5rem;
 }
 
-/* --- Common UI Components --- */
 .btn-group {
   display: flex;
   gap: 1rem;
@@ -164,19 +158,18 @@ header p {
   background: #152b7a;
 }
 
-/* --- Sections --- */
 section {
-  padding: 100px 12%;
   opacity: 0;
   transform: translateY(30px);
-  transition: all 0.8s ease-out;
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
 }
 
 section.reveal {
   opacity: 1;
   transform: translateY(0);
 }
-
 h2 {
   font-size: 2.2rem;
   font-weight: 800;
@@ -196,7 +189,6 @@ h2::after {
   border-radius: 2px;
 }
 
-/* --- Content Grid & Cards --- */
 .card {
   background: var(--bg-secondary);
   border: 1px solid var(--border);
@@ -242,7 +234,6 @@ h2::after {
   font-size: 0.95rem;
 }
 
-/* --- Skill Tags --- */
 .skills-container {
   display: flex;
   flex-wrap: wrap;
