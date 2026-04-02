@@ -83,6 +83,40 @@ nav {
 .nav-links a:hover {
   color: var(--primary);
 }
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-main);
+}
+
+/* Show hamburger only on mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none; /* hidden initially */
+    position: absolute;
+    top: 70px;
+    right: 8%;
+    background: var(--bg-secondary);
+    flex-direction: column;
+    width: 200px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    padding: 1rem;
+  }
+
+  .nav-links a {
+    margin: 0.8rem 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
 
 header {
   height: 100vh;
