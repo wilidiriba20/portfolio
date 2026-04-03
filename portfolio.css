@@ -32,7 +32,7 @@ body {
     radial-gradient(at 100% 0%, rgba(241, 169, 46, 0.03) 0px, transparent 50%);
 }
 
-/* --- Navigation --- */
+
 nav {
   position: fixed;
   top: 0;
@@ -83,7 +83,7 @@ nav {
 .nav-links a:hover {
   color: var(--primary);
 }
-/* Hamburger container */
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -287,6 +287,24 @@ h2::after {
   margin-bottom: 1.5rem;
 }
 
+.project-grid .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;  
+  justify-content: flex-start; 
+}
+
+.project-grid .card p,
+.project-grid .card h3 {
+  text-align: center; 
+  
+}
+
+.project-grid .card a {
+  display: inline-block;
+  margin-top: 0.8rem;
+}
 .card h3 {
   font-size: 1.4rem;
   margin-bottom: 1rem;
@@ -298,7 +316,37 @@ h2::after {
   margin-bottom: 2rem;
   font-size: 0.95rem;
 }
-
+.certification-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+#certifications .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: space-between;
+  text-align: center; 
+  height: 100%;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+.cert-logo {
+  height: 70px; 
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.cert-logo span {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.card p {
+  min-height: 60px; 
+}
+.card .btn {
+  margin-top: auto;
+}
 .skills-container {
   display: flex;
   flex-wrap: wrap;
@@ -340,10 +388,10 @@ h2::after {
   justify-content: center;
   transition: all 0.4s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  decoration: none;
+  text-decoration: none; !important;
 }
 
-/* Hover effect */
+
 .social-links a:hover {
   transform: translateY(-5px) scale(1.1);
   background: #fff;
